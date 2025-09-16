@@ -11,14 +11,14 @@ export const metadata: Metadata = {
   description: "budgie makes software to help.",
 };
 
-export default function RootLayout({ children }: Readonly<{
+export default function RootLayout({
+  children,
+}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className={`${workSans.className} antialiased`}>
-        {children}
-      </body>
+      <body className={`${workSans.className} antialiased`}>{children}</body>
     </html>
   );
 }
