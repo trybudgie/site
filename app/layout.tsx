@@ -8,7 +8,7 @@ const workSans = Work_Sans({
 
 export const metadata: Metadata = {
   title: "budgie",
-  description: "budgie makes software to help.",
+  description: "making a flock of software.",
 };
 
 export default function RootLayout({
