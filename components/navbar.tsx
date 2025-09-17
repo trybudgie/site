@@ -45,13 +45,15 @@ export default function Navbar() {
               <Linkedin className="h-10 w-10" />
             </Button>
           </Link>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-secondary hover:text-primary hover:bg-primary/10"
-          >
-            <Instagram className="h-10 w-10" />
-          </Button>
+          <Link href="https://www.instagram.com/trybudgie/">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-secondary hover:text-primary hover:bg-primary/10"
+            >
+              <Instagram className="h-10 w-10" />
+            </Button>
+          </Link>
         </div>
       </div>
     </nav>
