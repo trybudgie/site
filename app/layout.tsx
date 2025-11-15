@@ -1,38 +1,28 @@
 import type { Metadata } from "next";
-import { Work_Sans } from "next/font/google";
+import { Lexend } from "next/font/google";
+import { cn } from "@/lib/utils";
 import "./globals.css";
 
-const workSans = Work_Sans({
-  subsets: ["latin"],
-});
+const workSans = Lexend({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "budgie",
   description: "making a flock of software.",
-  openGraph: {
-    title: "budgie",
-    description: "making a flock of software.",
-    images: [
+  icons: {
+    icon: [
       {
         url: "/budgie.png",
-        width: 500,
-        height: 500,
-        alt: "budgie",
-        type: "image/png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/budgie.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/budgie.svg",
+        type: "image/svg+xml",
       },
     ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "budgie",
-    description: "making a flock of software.",
-    images: ["/budgie.png"],
-  },
-  icons: {
-    icon: "/budgie.png",
-    shortcut: "/budgie.png",
     apple: "/budgie.png",
   },
 };
@@ -44,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${workSans.className} antialiased`}>{children}</body>
+      <body className={cn("antialiased", workSans.className)}>{children}</body>
     </html>
   );
 }
