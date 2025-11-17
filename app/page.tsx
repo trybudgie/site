@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 const projects = [
   {
@@ -51,9 +52,10 @@ export default function Home() {
           <div className="space-y-6">
             {projects.map((project) => (
               <Link
+                target="_blank"
                 key={project.name}
                 href={project.url}
-                className="flex items-start p-2 rounded-full gap-4 hover:transition-all hover:duration-300 hover:bg-[#FEFEFF] hover:shadow-2xl"
+                className="flex items-start p-2 rounded-full gap-2 transition-all duration-300 hover:bg-[#FEFEFF] hover:shadow-2xl"
               >
                 <Image
                   className="rounded-full"
